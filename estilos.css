@@ -1,0 +1,477 @@
+/* Importamos la tipografía Roboto desde Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-principal: rgb(180, 178, 163);
+    --color-oscuro: rgb(45, 54, 59);
+    --color-claro: white;
+    --color-secundario: rgb(240, 238, 225);
+    --color-texto: rgb(40, 40, 40);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html,
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+
+    background-color: var(--color-claro);
+    color: var(--color-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--color-principal);
+    width: 100%;
+}
+
+#logo{
+    display: block;
+}
+
+
+#logo img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+#hamburguesa{
+    margin-left: auto;
+    display: block;
+}
+
+
+#hamburguesa img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+nav{
+    display: none;
+}
+
+#iconos{
+    display: flex;
+    gap: 0.5em;
+    margin-left: 1em;
+}
+
+
+#iconos a{
+    display: block;
+
+}
+
+
+#iconos img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+#inicio{
+    background-color: var(--color-principal);
+    text-align: center;
+    padding: 4em 1.5em;
+    width: 100%;
+}
+
+
+#inicio p:first-child{
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+#inicio h1{
+    font-size: 2.5em;
+    margin-bottom: 0.7em;
+}
+
+
+#texto-inicio{
+    max-width: 600px;
+    margin: 0 auto 2em auto;
+    line-height: 1.6;
+}
+
+.boton{
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    text-decoration: none;
+    padding: 0.7em 1.5em;
+    display: inline-block;
+    font-size: 0.8em;
+    transition: 0.3s;
+}
+
+.boton:hover{
+    background-color: rgb(100, 100, 100);
+    color: white;
+}
+
+#categorias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 3em 1em;
+}
+
+
+#categorias article{
+    text-align: center;
+    width: 140px;
+}
+
+
+#categorias article img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1em auto;
+    transition: 0.3s;
+}
+
+
+#categorias article h2{
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+}
+
+
+#categorias article p{
+    font-size: 0.75em;
+    line-height: 1.5;
+}
+
+#categorias article:hover img{
+    width: 110px;
+    height: 110px;
+}
+
+#destacada{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 1em;
+}
+
+
+#imagen-destacada{
+    width: 100%;
+}
+
+
+#imagen-destacada img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+#texto-destacado{
+    background-color: var(--color-secundario);
+    padding: 2em;
+}
+
+
+#texto-destacado > p:first-child{
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+
+
+#texto-destacado h2{
+    font-size: 2em;
+    margin-bottom: 0.7em;
+}
+
+
+#texto-destacado p{
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+#texto-destacado .boton{
+    align-self: flex-start;
+}
+
+#productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 3em 1em;
+}
+
+
+.producto{
+    width: 150px;
+    transition: 0.3s;
+}
+
+.imagen-producto{
+    position: relative;
+    margin-bottom: 1em;
+}
+
+
+.imagen-producto img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.imagen-producto span{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--color-claro);
+    padding: 0.4em;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+
+.producto h2{
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+
+.producto p{
+    font-size: 0.75em;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
+}
+
+
+.producto a{
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 0.7em;
+    font-weight: bold;
+
+}
+
+.producto:hover{
+    transform: translateY(-5px);
+}
+
+
+.producto a:hover{
+    color: rgb(100, 100, 100);
+}
+
+#suscripcion{
+    background-color: var(--color-oscuro);
+    color: white;
+    text-align: center;
+    padding: 3em 1em;
+}
+
+
+#suscripcion h2{
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+
+#suscripcion > p{
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+#suscripcion form{
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+
+#suscripcion input[type="email"]{
+    width: 60%;
+    max-width: 350px;
+    padding: 0.8em;
+    border: none;
+    outline: none;
+}
+
+#suscripcion input[type="email"]:focus:invalid{
+    border: 2px solid rgb(200, 80, 80);
+}
+
+
+#suscripcion input[type="email"]:focus:valid{
+    border: 2px solid rgb(100, 170, 100);
+}
+
+#suscripcion button{
+    background-color: white;
+    color: var(--color-oscuro);
+    border: none; 
+    padding: 0.8em 1.5em;
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+
+#suscripcion button:hover{
+    background-color: var(--color-principal); 
+    color: white;
+}
+
+
+#suscripcion label{
+    font-size: 0.7em; 
+}
+
+footer{
+    background-color: rgb(235, 240, 243); 
+    text-align: center; 
+    padding: 2em 1em; 
+}
+
+
+footer p{
+    font-size: 0.7em;
+    margin-bottom: 0.5em; 
+}
+
+@media all and (min-width: 768px){
+
+    #hamburguesa{
+        display: none; 
+    }
+
+
+    nav{
+        display: flex; 
+        gap: 1.5em; 
+        margin-left: auto;
+    }
+
+
+    nav a{
+        color: white; 
+        text-decoration: none; 
+        font-size: 0.8em; 
+        transition: 0.3s; 
+    }
+
+
+    nav a:hover{
+        color: var(--color-oscuro); 
+    }
+
+    #inicio{
+        padding: 6em 2em;
+    }
+
+
+    #inicio h1{
+        font-size: 3em;
+    }
+
+    #categorias{
+        padding: 4em 2em; 
+        gap: 3em;
+    }
+
+    #destacada{
+        flex-direction: row;
+        max-width: 900px; 
+        margin: 3em auto; 
+    }
+
+
+    #imagen-destacada{
+        width: 50%; 
+    }
+
+
+    #texto-destacado{
+        width: 50%; 
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+    }
+
+    #productos{
+        gap: 3em; 
+        padding: 4em 2em; 
+    }
+
+
+    .producto{
+        width: 180px;
+    }
+
+}
+
+@media all and (min-width: 1200px){
+    header{
+        padding: 1em 5em;
+    }
+
+    #inicio{
+        padding: 8em 2em; 
+    }
+
+
+    #inicio h1{
+        font-size: 4em; 
+    }
+
+    #categorias{
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    #destacada{
+         max-width: 1000px; 
+    }
+
+
+    #imagen-destacada img{
+        min-height: 100%; 
+    }
+
+    #productos{
+        max-width: 1100px;
+        margin: auto; 
+    }
+
+
+    .producto{
+        width: 250px;
+    }
+
+
+    .imagen-producto img{
+        height: 160px;
+    }
+
+}
